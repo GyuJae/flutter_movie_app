@@ -35,7 +35,7 @@ void main() {
   });
 
   test("인기있는 영화 목록을 가져올 수 있습니다.", () async {
-    final result = await getCurrentMovieUseCase.execute();
+    final result = await getCurrentMovieUseCase.call();
 
     //then
     expect(result, const Right(movies));

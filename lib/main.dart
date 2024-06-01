@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/features/movies/presentation/pages/movie_page.dart';
+import 'package:movie_app/injection_container.dart' as di;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
   runApp(const MyApp());
 }
 
@@ -14,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const Text("Hello World!"),
+      home: const MoviePage(),
     );
   }
 }
