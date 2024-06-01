@@ -1,16 +1,25 @@
-# movie_app
+## Core
 
-A new Flutter project.
+## Features
 
-## Getting Started
+## Data Layer
 
-This project is a starting point for a Flutter application.
+- `data_sources`: Local, Remote
+- `models`
+- `repositories`
 
-A few resources to get you started if this is your first Flutter project:
+## Domain Layer
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `entities`
+- `repositories`: Abstract class, Contracts
+- `use_cases`: SignUp, Login
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Presentation Layer
+
+- `bloc`
+- `pages`
+- `widgets`
+
+## Injection Container
+
+- `injection_container.dart`
