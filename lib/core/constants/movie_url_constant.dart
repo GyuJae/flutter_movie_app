@@ -4,7 +4,7 @@ class MovieUrlConstant {
   static const String nowPlaying = '$baseUrl/now-playing';
   static const String comingSoon = '$baseUrl/coming-soon';
 
-  static String getMovieUrl(String id) => '$baseUrl/movie?id=$id';
+  static String getMovieUrl(int id) => '$baseUrl/movie?id=$id';
 
   static String buildImageUrl(String path) =>
       'https://image.tmdb.org/t/p/w500/$path';

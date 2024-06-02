@@ -27,12 +27,12 @@ class MovieModel extends MovieEntity {
       originalLanguage: map['original_language'],
       originalTitle: map['original_title'],
       overview: map['overview'],
-      popularity: map['popularity'],
+      popularity: (map['popularity'] as num).toDouble(),
       posterPath: map['poster_path'],
       releaseDate: map['release_date'],
       title: map['title'],
       video: map['video'],
-      voteAverage: map['vote_average'],
+      voteAverage: (map['vote_average'] as num).toDouble(),
       voteCount: map['vote_count'],
     );
   }

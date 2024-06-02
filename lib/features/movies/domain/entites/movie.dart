@@ -9,13 +9,13 @@ class MovieEntity extends Equatable {
   final String originalLanguage;
   final String originalTitle;
   final String overview;
-  final double popularity;
+  final num popularity;
   final String posterPath;
   final String releaseDate;
   final String title;
   final bool video;
-  final double voteAverage;
-  final int voteCount;
+  final num voteAverage;
+  final num voteCount;
 
   const MovieEntity({
     required this.adult,

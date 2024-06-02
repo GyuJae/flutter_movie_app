@@ -10,13 +10,27 @@ class MovieRepositoryImpl implements MovieRepository {
   MovieRepositoryImpl(this._apiService);
 
   @override
-  Future<Either<Failure, List<MovieModel>>> getComingSoon() {
-    throw UnimplementedError();
+  Future<Either<Failure, List<MovieModel>>> getComingSoon() async {
+    try {
+      final movies = await _apiService.getUpcomingMovies();
+      return Right(movies);
+    } catch (e) {
+      return Left(ServerFailure(
+        message: e.toString(),
+      ));
+    }
   }
 
   @override
-  Future<Either<Failure, MovieModel>> getMovie(int id) {
-    throw UnimplementedError();
+  Future<Either<Failure, MovieModel>> getMovie(int id) async {
+    try {
+      final movie = await _apiService.getMovie(id);
+      return Right(movie);
+    } catch (e) {
+      return Left(ServerFailure(
+        message: e.toString(),
+      ));
+    }
   }
 
   @override
@@ -32,7 +46,14 @@ class MovieRepositoryImpl implements MovieRepository {
   }
 
   @override
-  Future<Either<Failure, List<MovieModel>>> getPopularMovies() {
-    throw UnimplementedError();
+  Future<Either<Failure, List<MovieModel>>> getPopularMovies() async {
+    try {
+      final movies = await _apiService.getPopularMovies();
+      return Right(movies);
+    } catch (e) {
+      return Left(ServerFailure(
+        message: e.toString(),
+      ));
+    }
   }
 }
